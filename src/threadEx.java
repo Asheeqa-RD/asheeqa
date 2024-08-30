@@ -9,7 +9,7 @@ public class threadEx {
         System.out.println("currentThread:" + t);
         
         try{
-            for(int i=0;i<=5;i++){
+            for(int i=0;i<=5;i++){ 
                 System.out.println(i);
                 Thread.sleep(1000);
             }
@@ -19,4 +19,4 @@ public class threadEx {
         }
 
     }
-}
+}    

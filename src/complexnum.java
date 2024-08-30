@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class complexnum {
 
     int real, imaginary;
-
+ 
     complexnum(int real, int imaginary) {
 
         this.real = real;
