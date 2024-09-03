@@ -1,15 +1,25 @@
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class largestinarr {
 
     public static void main(String args[]) {
 
-        int arr[] = {3, 6, 1, 66, 33, 88, 11};
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter the number of elements");
+        int n = sc.nextInt();
+
+        int arr[] = new int[n];
+        
+         System.out.println("enter the  elements");
+         
+         for(int i=0;i<n;i++){
+             arr[i]=sc.nextInt();
+         }
 
         Arrays.sort(arr);
-
-        int n = arr.length;
 
         int small = arr[1];
 
