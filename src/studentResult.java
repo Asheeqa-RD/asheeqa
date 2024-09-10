@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class Student {
 
-     String name;
+    String name;
 
     public Student(String name) {
         this.name = name;
@@ -29,22 +29,18 @@ class ResultStudent extends Student {
 
         return math >= 50 && science >= 50 && english >= 50;
     }
-    
-    public int total(){
-        return math+science+english;
+
+    public int total() {
+        return math + science + english;
     }
 
     public void displayResult() {
-        
-        
-        int totalMarks=total();
+
+        int totalMarks = total();
         String result = checkPassed() ? "Passed" : "Failed";
         System.out.printf("Student: %s \nMath: %d \nScience: %d \nEnglish: %d \nTotal Marks: %d \nResult: %s\n",
-                getName(), math, science, english,totalMarks, result);
+                getName(), math, science, english, totalMarks, result);
     }
-}
-
-public class studentResult {
 
     public static void main(String[] args) {
 
@@ -68,3 +64,5 @@ public class studentResult {
 
     }
 }
+
+
