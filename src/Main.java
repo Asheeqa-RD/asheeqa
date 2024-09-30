@@ -19,7 +19,8 @@ class EvenNumbers implements Runnable {
     }
 }
 
-class OddNumbers implements Runnable {
+class OddNumbers implements Runnable 
+{
     private final int limit;
 
     public OddNumbers(int limit) {
