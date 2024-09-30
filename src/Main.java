@@ -34,10 +34,7 @@ class OddNumbers implements Runnable {
             }
         }
     }
-}
-
-public class Main {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
         System.out.print("Enter the limit: ");
@@ -60,5 +57,3 @@ public class Main {
         scanner.close();
     }
 }
-
-

@@ -27,9 +27,6 @@ public class rectangleapplet extends Applet {
         g.fillRect(x1, x2, x3, x4);
 
     }
-
 }
-/*
-<applet code="rectangleapplet" width=300 height=100>
-</applet>
-*/
+
+<
