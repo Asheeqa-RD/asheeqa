@@ -1,68 +1,47 @@
-import java.util.Scanner;
 
-// Employee.java
-class Netsalary {
+class Employee {
+
     private int empId;
     private String name;
     private String designation;
     private String department;
 
-    public Netsalary(int empId, String name, String designation, String department) {
+    public Employee(int empId, String name, String designation, String department) {
         this.empId = empId;
         this.name = name;
         this.designation = designation;
         this.department = department;
     }
 
-    public int getEmpId() {
-        return empId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDesignation() {
-        return designation;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
 }
 
-// Salary.java
-class Salary extends Netsalary {
+class Salary extends Employee {
+
     private double basic;
+    private double hra = 1250;
+    private double da;
+    private double allowance;
 
     public Salary(int empId, String name, String designation, String department, double basic) {
         super(empId, name, designation, department);
         this.basic = basic;
+        this.da = 1.1 * basic;  // DA is 110% of basic
+        this.allowance = 0.35 * basic;  // Allowance is 35% of basic
     }
 
     public double computeNetSalary() {
-        double hra = 1250;
-        double pf = 0.12 * basic;
-        double da = 1.1 * basic;
-        double allowance = 0.35 * basic;
-        double netSalary = basic + hra + da + allowance - pf;
-        return netSalary;
+        double pf = 0.12 * basic;  // PF is 12% of basic
+        return basic + hra + da + allowance - pf;
     }
 
     public void displaySalary() {
-        System.out.println("Employee ID: " + getEmpId());
-        System.out.println("Name: " + getName());
-        System.out.println("Designation: " + getDesignation());
-        System.out.println("Department: " + getDepartment());
-        System.out.println("Basic Salary: " + basic);
-        System.out.println("Net Salary: " + computeNetSalary());
-    }
-}
 
-// Main.java
- class main  {
+
+        System.out.printf("Net Salary: %.2f%n", computeNetSalary());
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
 
         System.out.print("Enter Employee ID: ");
         int empId = scanner.nextInt();
@@ -83,6 +62,7 @@ class Salary extends Netsalary {
         Salary employee = new Salary(empId, name, designation, department, basic);
         employee.displaySalary();
 
-        
+        scanner.close();
     }
+
 }
