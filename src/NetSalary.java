@@ -25,12 +25,12 @@ class Salary extends Employee {
     public Salary(int empId, String name, String designation, String department, double basic) {
         super(empId, name, designation, department);
         this.basic = basic;
-        this.da = 1.1 * basic;  // DA is 110% of basic
-        this.allowance = 0.35 * basic;  // Allowance is 35% of basic
+        this.da = 1.1 * basic;  
+        this.allowance = 0.35 * basic;  
     }
 
     public double computeNetSalary() {
-        double pf = 0.12 * basic;  // PF is 12% of basic
+        double pf = 0.12 * basic;  
         return basic + hra + da + allowance - pf;
     }
 
@@ -45,7 +45,7 @@ class Salary extends Employee {
 
         System.out.print("Enter Employee ID: ");
         int empId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         System.out.print("Enter Name: ");
         String name = scanner.nextLine();

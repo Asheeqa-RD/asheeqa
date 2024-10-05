@@ -9,13 +9,13 @@ public class SimpleListBoxExample {
         Button addButton = new Button("Add");
         Button removeButton = new Button("Remove");
 
-        // Set component bounds
+        
         listBox.setBounds(50, 50, 200, 150);
         inputField.setBounds(50, 220, 150, 30);
         addButton.setBounds(210, 220, 60, 30);
         removeButton.setBounds(50, 260, 220, 30);
 
-        // Add action listeners
+      
         addButton.addActionListener(e -> {
             String item = inputField.getText();
             if (!item.isEmpty()) {
@@ -29,7 +29,7 @@ public class SimpleListBoxExample {
             if (index != -1) listBox.remove(index);
         });
 
-        // Add components to frame and set properties
+        
         frame.add(listBox);
         frame.add(inputField);
         frame.add(addButton);

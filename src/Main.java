@@ -39,7 +39,7 @@ class OddNumbers implements Runnable
         Scanner scanner = new Scanner(System.in);
         
         System.out.print("Enter the limit: ");
-        int limit = scanner.nextInt(); // Accept user input for limit
+        int limit = scanner.nextInt();
 
         Thread evenThread = new Thread(new EvenNumbers(limit));
         Thread oddThread = new Thread(new OddNumbers(limit));
